@@ -1,0 +1,24 @@
+.solution-modal {
+	display: flex;
+	gap: 40px;
+	padding: 40px;
+
+	.solution-modal-role,
+	.solution-modal-industry,
+	.solution-modal-partnership {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		width: 33.33%;
+
+		p {
+			font-weight: 700;
+			font-size: 15px;
+			padding: 4px;
+		}
+
+		p:first-child {
+			color: $color-grayMedium;
+		}
+	}
+}

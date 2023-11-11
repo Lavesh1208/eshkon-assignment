@@ -1,0 +1,140 @@
+.hero {
+	margin-top: 74px;
+	background: $color-black;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+
+	div:first-child {
+		width: 92%;
+		margin-left: auto;
+	}
+
+	.hero-section-top {
+		width: 100%;
+		display: flex;
+		gap: 120px;
+		min-height: calc(100vh - 80px);
+
+		.hero-section-left {
+			width: 30%;
+			padding: 60px 0 80px 0;
+			font-size: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: start;
+
+			div:first-child {
+				margin: 0;
+				position: relative;
+			}
+
+			.hero-dropdown-closed {
+				color: $color-white;
+				font-size: 14px;
+				font-weight: 700;
+				display: flex;
+				align-items: center;
+				gap: 6px;
+
+				.hero-dropdown-image {
+					background: $color-white;
+					border-radius: 50px;
+					margin-right: 10px;
+				}
+			}
+
+			.hero-dropdown-open {
+				background: $color-white;
+				width: 330px;
+				z-index: 10;
+				position: absolute;
+				top: 0;
+				padding: 20px;
+				display: none;
+
+				.hero-dropdown-open-image {
+					background: $color-grayLight;
+					border-radius: 50px;
+					margin-right: 10px;
+				}
+
+				div {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					padding: 10px 20px 10px 0;
+				}
+
+				p {
+					font-size: 16px;
+					font-weight: 500;
+				}
+
+				> p {
+					color: $color-blueMedium;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding: 10px;
+				}
+			}
+
+			.hero-section-content {
+				color: $color-white;
+				font-size: 65px;
+				font-weight: 500;
+				margin-top: 30px;
+
+				p {
+					margin: 0; // Remove default margin for <p> tag
+				}
+			}
+
+			.call-to-action-info {
+				color: $color-white;
+				font-size: 23px;
+				margin-bottom: 32px;
+			}
+		}
+
+		.hero-section-right {
+			width: 60%;
+			background: $color-white;
+			overflow: hidden;
+
+			.hero-section-image {
+				width: 100%;
+				height: 100%;
+				background-image: url(https://images.ctfassets.net/0d3i1kfsuaq3/1dqQiq5617BHW7taoDykG9/5c4cbce59ebe1e97a075b03cadd3c580/Hiring_managers_1.webp);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				position: relative;
+			}
+
+			svg:first-child {
+				position: absolute;
+				top: 10;
+			}
+
+			svg:last-child {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+
+	.hero-section-bottom {
+		p {
+			margin: auto;
+			width: 80%;
+			padding: 100px 120px 180px 0;
+			font-size: 90px;
+			font-weight: 500;
+			color: $color-white;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+.header {
+	position: fixed;
+	top: 56px;
+	left: 0;
+	right: 0;
+	height: 74px;
+	display: flex;
+	padding: 0 40px;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $color-white;
+	transition: background-color 0.5s ease;
+	z-index: 1000;
+
+	&.scrolled-class {
+		transform: translateY(-200px);
+		transition: transform 0.5s ease;
+	}
+
+	.logo-container {
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-links {
+		list-style: none;
+		display: flex;
+		gap: 40px;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+
+			svg {
+				width: 12px;
+				height: 8px;
+				transition: transform 0.5s ease;
+			}
+
+			&:hover {
+				.nav-link {
+					color: $color-blueLight;
+				}
+				svg {
+					transform: perspective(1000px) rotateX(180deg);
+					color: $color-blueLight;
+				}
+			}
+		}
+
+		.nav-link {
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 16px;
+			color: $color-black;
+		}
+	}
+
+	.modal {
+		position: absolute;
+		width: fit-content;
+		top: 100%;
+		left: 50%;
+		opacity: 0;
+		transition: all 0.5s ease;
+		transform: translateX(-50%);
+		background-color: #fff;
+		border-radius: 20px;
+		box-shadow: 0 2px 5px rgba(226, 9, 9, 0.1);
+		z-index: 10;
+	}
+
+	.modal.modal-transition {
+		opacity: 1;
+	}
+
+	div {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+
+		.login-button {
+			text-decoration: none;
+			font-weight: 700;
+			color: $color-blueMedium;
+			padding: 12px 21px;
+			border-radius: 100px;
+			border: 2px solid $color-blueMedium;
+
+			&:hover {
+				background: $color-blueMedium;
+				color: $color-white;
+			}
+		}
+	}
+}
+
+.header.scrolled {
+	background-color: lightblue;
+	transform: translateY(0);
+}
